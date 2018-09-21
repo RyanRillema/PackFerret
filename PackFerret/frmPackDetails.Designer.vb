@@ -152,7 +152,7 @@ Partial Class frmPackDetails
         Me.lbPort.AutoSize = True
         Me.lbPort.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbPort.Location = New System.Drawing.Point(3, 171)
-        Me.lbPort.Margin = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.lbPort.Margin = New System.Windows.Forms.Padding(3)
         Me.lbPort.Name = "lbPort"
         Me.lbPort.Size = New System.Drawing.Size(134, 22)
         Me.lbPort.TabIndex = 12
@@ -172,7 +172,7 @@ Partial Class frmPackDetails
         Me.lbService.AutoSize = True
         Me.lbService.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbService.Location = New System.Drawing.Point(3, 143)
-        Me.lbService.Margin = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.lbService.Margin = New System.Windows.Forms.Padding(3)
         Me.lbService.Name = "lbService"
         Me.lbService.Size = New System.Drawing.Size(134, 22)
         Me.lbService.TabIndex = 10
@@ -192,7 +192,7 @@ Partial Class frmPackDetails
         Me.lbPass.AutoSize = True
         Me.lbPass.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbPass.Location = New System.Drawing.Point(3, 115)
-        Me.lbPass.Margin = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.lbPass.Margin = New System.Windows.Forms.Padding(3)
         Me.lbPass.Name = "lbPass"
         Me.lbPass.Size = New System.Drawing.Size(134, 22)
         Me.lbPass.TabIndex = 8
@@ -212,7 +212,7 @@ Partial Class frmPackDetails
         Me.lbLogin.AutoSize = True
         Me.lbLogin.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbLogin.Location = New System.Drawing.Point(3, 87)
-        Me.lbLogin.Margin = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.lbLogin.Margin = New System.Windows.Forms.Padding(3)
         Me.lbLogin.Name = "lbLogin"
         Me.lbLogin.Size = New System.Drawing.Size(134, 22)
         Me.lbLogin.TabIndex = 6
@@ -224,7 +224,7 @@ Partial Class frmPackDetails
         Me.lbServer.AutoSize = True
         Me.lbServer.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbServer.Location = New System.Drawing.Point(3, 59)
-        Me.lbServer.Margin = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.lbServer.Margin = New System.Windows.Forms.Padding(3)
         Me.lbServer.Name = "lbServer"
         Me.lbServer.Size = New System.Drawing.Size(134, 22)
         Me.lbServer.TabIndex = 4
@@ -244,7 +244,7 @@ Partial Class frmPackDetails
         Me.lbIdentifier.AutoSize = True
         Me.lbIdentifier.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbIdentifier.Location = New System.Drawing.Point(3, 31)
-        Me.lbIdentifier.Margin = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.lbIdentifier.Margin = New System.Windows.Forms.Padding(3)
         Me.lbIdentifier.Name = "lbIdentifier"
         Me.lbIdentifier.Size = New System.Drawing.Size(134, 22)
         Me.lbIdentifier.TabIndex = 2
@@ -256,7 +256,7 @@ Partial Class frmPackDetails
         Me.lbName.AutoSize = True
         Me.lbName.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lbName.Location = New System.Drawing.Point(3, 3)
-        Me.lbName.Margin = New System.Windows.Forms.Padding(3, 3, 3, 3)
+        Me.lbName.Margin = New System.Windows.Forms.Padding(3)
         Me.lbName.Name = "lbName"
         Me.lbName.Size = New System.Drawing.Size(134, 22)
         Me.lbName.TabIndex = 0

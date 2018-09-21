@@ -58,4 +58,7 @@
         PackFerret.frmPackDetails.ShowFormDelete(lbPacks.SelectedIndex)
     End Sub
 
+    Private Sub cmdParams_Click(sender As Object, e As EventArgs) Handles cmdParams.Click
+        PackFerret.frmParams.ShowForm()
+    End Sub
 End Class

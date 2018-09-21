@@ -2,7 +2,9 @@
 
     Public frmPackFerret As frmPackFerret
     Public frmPackDetails As frmPackDetails
+    Public frmParams As frmParams
     Public PackDetails(20) As PackDetails
+    Public oParams As Params
     Public oFerretConst As FerretConst
     Public oIOObject As IO
     Public iCurrentPack As Integer = 1
@@ -19,6 +21,9 @@
         frmPackFerret = oSetFrmPackFerret
         frmPackDetails = New frmPackDetails(Me)
         frmPackDetails.HideForm()
+        oParams = New Params
+        frmParams = New frmParams(Me)
+        frmParams.HideForm()
 
         For iPackLoop = 0 To 20
             PackDetails(iPackLoop) = New PackDetails

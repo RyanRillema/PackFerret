@@ -10,6 +10,29 @@ Public Class IO
         oPackFerret = oSetPackFerret
     End Sub
 
+    Public Function LoadParamsFromPath(sPath As String) As Boolean
+        Dim sReadLine As String
+        Dim sParamPath As String
+
+        'Open stream reader
+        If Dir(sPath & "\Params.txt") = "" Then
+            Return False
+        End If
+
+        oFileReader = New StreamReader(sPath & "\Params.txt")
+
+        sReadLine = oFileReader.ReadLine()
+
+        sParamPath = sReadLine.Substring(sReadLine.IndexOf("#P") + 2)
+
+        oPackFerret.oParams.sPath = sParamPath
+
+        oFileReader.Close()
+
+        Return True
+
+    End Function
+
     Public Function SavePacksToDisk()
         '#N - Name, #M - Identifier (My identifier), #D - Server (DNS Name), #L - Login, #P - Password, #S - Service
         Dim bReturn As Boolean
@@ -40,7 +63,7 @@ Public Class IO
         Return bReturn
     End Function
 
-    Public Function ReadPacksFromDisk()
+    Public Function ReadPacksFromDisk() As Boolean
         Dim bReturn As Boolean
         Dim iLoop As Integer
         Dim iReadPackCount As Integer
@@ -53,13 +76,14 @@ Public Class IO
         Dim sService As String
 
         'Open stream reader
-        If Dir(oPackFerret.oFerretConst.sSavePath & "\Packs.txt") = "" Then
+        'If Dir(oPackFerret.oFerretConst.sSavePath & "\Packs.txt") = "" Then
+        If Dir(oPackFerret.oParams.sPath & "\Packs.txt") = "" Then
             Return False
         End If
 
-        oFileReader = New StreamReader(oPackFerret.oFerretConst.sSavePath & "\Packs.txt")
+        oFileReader = New StreamReader(oPackFerret.oParams.sPath & "\Packs.txt")
 
-        'Build a write string and write for each pack
+        'Build a read string and read for each pack
         For iLoop = 1 To oPackFerret.oFerretConst.iTotalPacks
 
             sReadLine = oFileReader.ReadLine()

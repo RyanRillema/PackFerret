@@ -83,6 +83,12 @@
     <Compile Include="frmPackFerret.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmParams.Designer.vb">
+      <DependentUpon>frmParams.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmParams.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="IO.vb" />
     <Compile Include="KClientHandler.vb" />
     <Compile Include="frmPackDetails.Designer.vb">
@@ -93,6 +99,7 @@
     </Compile>
     <Compile Include="PackDetails.vb" />
     <Compile Include="PackFerret.vb" />
+    <Compile Include="Params.vb" />
     <Compile Include="ProofOfConcept.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmPackDetails.resx">
       <DependentUpon>frmPackDetails.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmParams.resx">
+      <DependentUpon>frmParams.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProofOfConcept.resx">
       <DependentUpon>ProofOfConcept.vb</DependentUpon>
