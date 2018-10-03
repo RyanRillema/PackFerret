@@ -55,6 +55,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -77,6 +78,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FerretConst.vb" />
+    <Compile Include="frmNewMachine.Designer.vb">
+      <DependentUpon>frmNewMachine.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewMachine.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmPackFerret.Designer.vb">
       <DependentUpon>frmPackFerret.vb</DependentUpon>
     </Compile>
@@ -124,6 +131,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="frmNewMachine.resx">
+      <DependentUpon>frmNewMachine.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmPackFerret.resx">
       <DependentUpon>frmPackFerret.vb</DependentUpon>
     </EmbeddedResource>
@@ -156,7 +166,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Dapino-Summer-Holiday-Palm-tree.ico" />
     <Content Include="Icons8-Ios7-Animals-Bear-Footprint.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

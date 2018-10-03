@@ -33,6 +33,29 @@ Public Class IO
 
     End Function
 
+    Public Function SaveParamsToPath(sPath As String) As Boolean
+        Dim sWriteLine As String
+        Dim sParamPath As String
+
+        'Open stream reader
+        If Dir(sPath & "\Params.txt") = "" Then
+            Return False
+        End If
+
+        oFileWriter = New StreamWriter(sPath & "\Params.txt")
+
+        'sReadLine = oFileReader.ReadLine()
+
+        'sParamPath = sReadLine.Substring(sReadLine.IndexOf("#P") + 2)
+
+        oPackFerret.oParams.sPath = sParamPath
+
+        oFileReader.Close()
+
+        Return True
+
+    End Function
+
     Public Function SavePacksToDisk()
         '#N - Name, #M - Identifier (My identifier), #D - Server (DNS Name), #L - Login, #P - Password, #S - Service
         Dim bReturn As Boolean

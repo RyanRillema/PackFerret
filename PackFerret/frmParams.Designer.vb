@@ -27,16 +27,16 @@ Partial Class frmParams
         Me.tlpMain = New System.Windows.Forms.TableLayoutPanel()
         Me.tlpCenter = New System.Windows.Forms.TableLayoutPanel()
         Me.tlpButtons = New System.Windows.Forms.TableLayoutPanel()
-        Me.tlpAbout = New System.Windows.Forms.TableLayoutPanel()
+        Me.cmdClose = New System.Windows.Forms.Button()
         Me.tlpParamMain = New System.Windows.Forms.TableLayoutPanel()
         Me.tlpPathParam = New System.Windows.Forms.TableLayoutPanel()
+        Me.lbPath = New System.Windows.Forms.Label()
         Me.lbParamLocal = New System.Windows.Forms.Label()
         Me.tlpStorageLocal = New System.Windows.Forms.TableLayoutPanel()
-        Me.rbPath = New System.Windows.Forms.RadioButton()
         Me.rbReg = New System.Windows.Forms.RadioButton()
-        Me.cmdClose = New System.Windows.Forms.Button()
-        Me.lbPath = New System.Windows.Forms.Label()
+        Me.rbPath = New System.Windows.Forms.RadioButton()
         Me.tbPath = New System.Windows.Forms.TextBox()
+        Me.tlpAbout = New System.Windows.Forms.TableLayoutPanel()
         Me.tlpAll.SuspendLayout()
         Me.tlpMain.SuspendLayout()
         Me.tlpCenter.SuspendLayout()
@@ -91,7 +91,7 @@ Partial Class frmParams
         Me.tlpCenter.Name = "tlpCenter"
         Me.tlpCenter.RowCount = 1
         Me.tlpCenter.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.tlpCenter.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.tlpCenter.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 425.0!))
         Me.tlpCenter.Size = New System.Drawing.Size(800, 425)
         Me.tlpCenter.TabIndex = 0
         '
@@ -119,21 +119,14 @@ Partial Class frmParams
         Me.tlpButtons.Size = New System.Drawing.Size(100, 425)
         Me.tlpButtons.TabIndex = 0
         '
-        'tlpAbout
+        'cmdClose
         '
-        Me.tlpAbout.ColumnCount = 3
-        Me.tlpAbout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.tlpAbout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.tlpAbout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
-        Me.tlpAbout.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.tlpAbout.Location = New System.Drawing.Point(0, 425)
-        Me.tlpAbout.Margin = New System.Windows.Forms.Padding(0)
-        Me.tlpAbout.Name = "tlpAbout"
-        Me.tlpAbout.RowCount = 1
-        Me.tlpAbout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.tlpAbout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.tlpAbout.Size = New System.Drawing.Size(800, 25)
-        Me.tlpAbout.TabIndex = 1
+        Me.cmdClose.Location = New System.Drawing.Point(3, 381)
+        Me.cmdClose.Name = "cmdClose"
+        Me.cmdClose.Size = New System.Drawing.Size(75, 23)
+        Me.cmdClose.TabIndex = 0
+        Me.cmdClose.Text = "Close"
+        Me.cmdClose.UseVisualStyleBackColor = True
         '
         'tlpParamMain
         '
@@ -174,6 +167,17 @@ Partial Class frmParams
         Me.tlpPathParam.Size = New System.Drawing.Size(350, 212)
         Me.tlpPathParam.TabIndex = 0
         '
+        'lbPath
+        '
+        Me.lbPath.AutoSize = True
+        Me.lbPath.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lbPath.Location = New System.Drawing.Point(3, 35)
+        Me.lbPath.Name = "lbPath"
+        Me.lbPath.Size = New System.Drawing.Size(84, 35)
+        Me.lbPath.TabIndex = 2
+        Me.lbPath.Text = "Path"
+        Me.lbPath.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'lbParamLocal
         '
         Me.lbParamLocal.AutoSize = True
@@ -198,22 +202,9 @@ Partial Class frmParams
         Me.tlpStorageLocal.Name = "tlpStorageLocal"
         Me.tlpStorageLocal.RowCount = 1
         Me.tlpStorageLocal.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.tlpStorageLocal.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.tlpStorageLocal.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35.0!))
         Me.tlpStorageLocal.Size = New System.Drawing.Size(260, 35)
         Me.tlpStorageLocal.TabIndex = 1
-        '
-        'rbPath
-        '
-        Me.rbPath.AutoSize = True
-        Me.rbPath.Checked = True
-        Me.rbPath.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.rbPath.Location = New System.Drawing.Point(3, 3)
-        Me.rbPath.Name = "rbPath"
-        Me.rbPath.Size = New System.Drawing.Size(124, 29)
-        Me.rbPath.TabIndex = 0
-        Me.rbPath.TabStop = True
-        Me.rbPath.Text = "Use Path"
-        Me.rbPath.UseVisualStyleBackColor = True
         '
         'rbReg
         '
@@ -226,25 +217,16 @@ Partial Class frmParams
         Me.rbReg.Text = "Use Registry"
         Me.rbReg.UseVisualStyleBackColor = True
         '
-        'cmdClose
+        'rbPath
         '
-        Me.cmdClose.Location = New System.Drawing.Point(3, 381)
-        Me.cmdClose.Name = "cmdClose"
-        Me.cmdClose.Size = New System.Drawing.Size(75, 23)
-        Me.cmdClose.TabIndex = 0
-        Me.cmdClose.Text = "Close"
-        Me.cmdClose.UseVisualStyleBackColor = True
-        '
-        'lbPath
-        '
-        Me.lbPath.AutoSize = True
-        Me.lbPath.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lbPath.Location = New System.Drawing.Point(3, 35)
-        Me.lbPath.Name = "lbPath"
-        Me.lbPath.Size = New System.Drawing.Size(84, 35)
-        Me.lbPath.TabIndex = 2
-        Me.lbPath.Text = "Path"
-        Me.lbPath.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.rbPath.AutoSize = True
+        Me.rbPath.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.rbPath.Location = New System.Drawing.Point(3, 3)
+        Me.rbPath.Name = "rbPath"
+        Me.rbPath.Size = New System.Drawing.Size(124, 29)
+        Me.rbPath.TabIndex = 0
+        Me.rbPath.Text = "Use Path"
+        Me.rbPath.UseVisualStyleBackColor = True
         '
         'tbPath
         '
@@ -255,6 +237,22 @@ Partial Class frmParams
         Me.tbPath.Size = New System.Drawing.Size(260, 20)
         Me.tbPath.TabIndex = 3
         Me.tbPath.Text = "C:\PackFerret"
+        '
+        'tlpAbout
+        '
+        Me.tlpAbout.ColumnCount = 3
+        Me.tlpAbout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.tlpAbout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.tlpAbout.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.tlpAbout.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.tlpAbout.Location = New System.Drawing.Point(0, 425)
+        Me.tlpAbout.Margin = New System.Windows.Forms.Padding(0)
+        Me.tlpAbout.Name = "tlpAbout"
+        Me.tlpAbout.RowCount = 1
+        Me.tlpAbout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.tlpAbout.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25.0!))
+        Me.tlpAbout.Size = New System.Drawing.Size(800, 25)
+        Me.tlpAbout.TabIndex = 1
         '
         'frmParams
         '
